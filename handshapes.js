@@ -1,0 +1,8 @@
+var v_outside = "M 5 5 l 30 90 30 -90"
+var v_inside = "M 20 5 l 15 50 15 -50"
+var thumb_out_r = "M 5 65 h 20"
+var thumb_out_l = "M 45 65 h 20"
+var thumb_in_r = "M 10 85 l 55 -30"
+var thumb_in_l = "M 5 55 l 55 30"
+var pointer_r = "M 35 5 v 90 m -15 -5 l 30 -25"
+var pointer_l = "M 35 5 v 90 m 15 -5 l -30 -25"
