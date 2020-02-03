@@ -10,7 +10,7 @@ var pointer_l = "M 35 5 v 90 m 15 -5 l -30 -25"
 var draw = SVG()
 function make_path(path_str) {
 
-  return draw.path(path_str).fill("none").stroke({width: "4"})
+  return draw.path(path_str).fill("none").stroke({width: "4", color: "black"})
 }
 
 var v_outside_path = make_path(v_outside)
