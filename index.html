@@ -7,6 +7,7 @@
 </head>
 <body>
   <h1>ASLwrite in svg</h1>
+  <div id="defs"></div><br />
   <div id="hand5"></div>
   <div id="hand3"></div>
   <div id="hand4"></div>
@@ -15,6 +16,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.13/svg.min.js" ></script>
   <script src="handshapes.js"></script>
   <script type="text/javascript">
+  
+    var draw = SVG().addTo("#defs")
+    draw.use(left.hand5)
+    draw.use(right.hand5).translate(100,0)
     
     function draw_hand(selector) {
       var svg = SVG().addTo(selector).size(70, 100)
