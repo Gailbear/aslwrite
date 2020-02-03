@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+<title>ASLwrite</title>
+<style type="text/css">
+  div { display: inline-block; padding: 10px;}
+</style>
+</head>
+<body>
+  <div id="hand5"></div>
+  <div id="hand3"></div>
+  <div id="hand4"></div>
+  <div id="hand2"></div>
+  <div id="hand1"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.13/svg.min.js" ></script>
+  <script type="text/javascript">
+    var v_outside = "M 5 5 l 30 90 30 -90"
+    var v_inside = "M 20 5 l 15 50 15 -50"
+    var thumb_out_r = "M 5 65 h 20"
+    var thumb_out_l = "M 45 65 h 20"
+    var thumb_in_r = "M 10 85 l 55 -30"
+    var thumb_in_l = "M 5 55 l 55 30"
+    var pointer_r = "M 35 5 v 90 m -15 -5 l 30 -25"
+    var pointer_l = "M 35 5 v 90 m 15 -5 l -30 -25"
+    
+    function draw_hand(selector) {
+      var svg = SVG().addTo(selector).size(70, 100)
+      svg.fill("none").stroke({color: "black", width: "4"})
+      return svg
+    }
+    
+    draw_hand("#hand5").path(v_outside + v_inside+ thumb_out_r)
+    draw_hand("#hand3").path(v_outside + thumb_out_r)
+    draw_hand("#hand4").path(v_outside + v_inside+ thumb_in_r)
+    draw_hand("#hand2").path(v_outside + thumb_in_r)
+    draw_hand("#hand1").path(pointer_r)
+  </script>
+</body>
+</html>
